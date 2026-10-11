@@ -57,14 +57,42 @@ Windows 専用。
 - `assets/world_icon.jpeg`（一覧に出るアイコン、800×450）を世界に入れる
 - zip の中のパスを `/` 区切りで書く。PowerShell 5.1 の `Compress-Archive` は、zip の規格に反して `\` 区切りで書く
 
-## 権利と公開について
+## ライセンスとクレジット
 
-- 元のリポジトリのライセンスは GPL-2.0。ただし世界には UBC の地理データと、
-  Version 2.0 で大勢の人が手作業で建てた建物が含まれる。建てた人の一覧は元のリポジトリの
+このリポジトリと、配布している `ubc_campus.mcworld` のライセンスは、元の作品と同じ
+**GNU General Public License v2.0**（全文は [LICENSE](LICENSE)）。
+
+### 元の作品
+
+- [minecraftUBC](https://github.com/ashtanmistal/minecraftUBC) リリース 3.0.0（GPL-2.0）
+- Version 3.0: [Ashtan Mistal](https://github.com/ashtanmistal)
+- Version 2.0（手作業の建築以外）: Ashtan Mistal、[Hod Kimhi](https://github.com/hkimhi)、
+  [Eve Sankar](https://github.com/geminiev)、[Bryce Wilson](https://github.com/Bryce-MW)
+- Version 2.0 の建物を建てた人の一覧は、元のリポジトリの
   [docs/building.md](https://github.com/ashtanmistal/minecraftUBC/blob/master/docs/building.md) にある
-- 一般に公開する前に、作者の Ashtan Mistal さんに許可を取る（元の README にある Discord が連絡先）
-- Bedrock の「アドオン」には世界を入れられない。公開するなら `.mcworld` か `.mctemplate` の形になる
+
+### この配布物で変えたこと
+
+- [Chunker](https://github.com/HiveGamesOSS/Chunker) 1.21.0 で Java 版 1.20.4 から Bedrock 版（`BEDROCK_R26_50`）の形式に変換した
+- ワールド名を「UBC」から「UBC Campus」に変えた
+- 一覧に出るアイコン（`world_icon.jpeg`）を足した
+
+建物や地形には手を加えていない。変換の手順はすべて [scripts/convert.ps1](scripts/convert.ps1) にある。
+
+### 注意
+
+- このプロジェクトは、ブリティッシュコロンビア大学（UBC）とは関係がない。UBC の名称は GPL の対象ではない
+- 元の作品は、元にしたデータ（LiDAR の点群、UBC の地理データ）の利用条件を明記していない
 - このリポジトリの画像は、変換した世界をゲームの中で撮ったもの
+
+## 配布について
+
+- 公式ストア（Marketplace）には出せない。出せるのは Mojang が認めたパートナーだけで、
+  このワールドには他の人の作品も含まれるため
+- 無料の配布は、GitHub の Releases に置いている。統合版のワールドとして配る形は `.mcworld`
+  （取り込んだ 1 つを遊び続ける）か `.mctemplate`（開くたびに新しいワールドを作る）
+- 元の作者の Ashtan Mistal さんへの連絡先は、元の README にある Discord。
+  配布について問題があれば、そこで相談する
 
 ## 確認すること
 
